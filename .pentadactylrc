@@ -1,0 +1,5 @@
+set passkeys+='mail\.google\.com':c/jkhnpouelxsfra#`[]z?\*nrtgidIU+-=<Tab><Return> 
+set passkeys+='\.google\.com/reader/view':c/jkhnpouelxsfra#`[]z?\*nrtgidIU+-=<Tab><Return>  
+autocmd LocationChange (www|mail)\.google\.com/(reader|mail) -js modes.set(modes.PASS_THROUGH)
+autocmd LocationChange \.twitter\.com -js modes.set(modes.PASS_THROUGH)
+set go+=T
