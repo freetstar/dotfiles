@@ -251,6 +251,21 @@
     <keybind key="W-S-Down">
       <action name="DirectionalCycleWindows"/>
     </keybind>
+    <keybind key="C-Print">
+       <action name="Execute">
+        <command>scrot -s "/home/freetstar/Picture/scrot/cut-%m.%d-%H%M%S.png"</command>
+        </action>
+    </keybind>
+    <keybind key="C-A-Print">
+        <action name="Execute">
+            <command>scrot -bs "/home/freetstar/Picture/scrot/app-%m.%d-%H%M%S.png"</command>
+        </action>
+    </keybind>
+    <keybind key="Print">
+        <action name="Execute">
+            <command>scrot "/home/freetstar/Picture/scrot/screen-%m.%d-%H%M%S.png"</command>
+       </action>
+    </keybind>
     <keybind key="W-Up">
       <action name="Execute">
        <command>amixer set Master 5%+</command>

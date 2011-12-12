@@ -6,9 +6,9 @@ set history=5000
 "激活鼠标
 "set mouse=a
 "打开文件检测
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
+"不包裹行
+set nowrap
 "设置encoding
 set encoding=utf-8
 "语法高亮
