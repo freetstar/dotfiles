@@ -19,6 +19,13 @@
 #set the wallpaper
 hsetroot -full  ~/Picture/vim-shortcuts.png &
 
+# launch unicode-rxvt daemon 
+#urxvtd -q -f -o                                   
+
+#launch screensaver daemon
+screensaver --nosplash &
+
+sleep 2
 #xcompmgr manager
 xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
 
@@ -29,9 +36,10 @@ tint2 &
 # cairo-dock
 cairo-dock & 
 
+# shell on the desk
+#urxvtc -name deskshell -tr -sh 100 +sb -fg White -depth 32 &             
 #conky 
 conky &
 
 #daemon
-#/usr/lib/notification-daemon/notification-daemon &
-
+/usr/lib/notification-daemon/notification-daemon &

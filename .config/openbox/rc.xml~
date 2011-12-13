@@ -245,6 +245,22 @@
   <keybind key="A-space">
     <action name="ShowMenu"><menu>client-menu</menu></action>
   </keybind>
+    <keybind key="c-print">
+      <action name="Execute">
+        <command>scrot -s "/home/freetstar/Picture/scrot/cut-%m.%d-%H%M%S.png"</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-Print">
+      <action name="Execute">
+        <command>scrot -bs "/home/freetstar/Picture/scrot/app-%m.%d-%H%M%S.png"</command>
+      </action>
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <command>scrot "/home/freetstar/Picture/scrot/screen-%m.%d-%H%M%S.png"</command>
+      </action>
+    </keybind>
+
 
   <!-- Keybindings for window switching -->
   <keybind key="A-Tab">
