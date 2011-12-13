@@ -32,3 +32,6 @@ cairo-dock &
 #conky 
 conky &
 
+#daemon
+/usr/lib/notification-daemon/notification-daemon &
+
