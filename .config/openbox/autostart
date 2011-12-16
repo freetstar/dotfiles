@@ -38,8 +38,12 @@ cairo-dock &
 
 # shell on the desk
 #urxvtc -name deskshell -tr -sh 100 +sb -fg White -depth 32 &             
+
 #conky 
 conky &
 
 #daemon
 /usr/lib/notification-daemon/notification-daemon &
+
+#volume
+volumeicon &
