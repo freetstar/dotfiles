@@ -29,8 +29,8 @@ sleep 2
 #xcompmgr manager
 xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
 
-# fcitx 
-/usr/bin/fcitx -d &
+fcitx -D &
+#/usr/bin/fcitx -d &
 # A panel for good times
 tint2 &
 # cairo-dock
@@ -43,7 +43,7 @@ cairo-dock &
 conky &
 
 #daemon
-/usr/lib/notification-daemon/notification-daemon &
+/usr/lib/notification-daemon-1.0/notification-daemon &
 
 #volume
 volumeicon &

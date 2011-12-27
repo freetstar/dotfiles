@@ -78,7 +78,6 @@ set foldmethod=syntax
 "2}}}
 
 "配置vim字体和颜{{{3
-set gfn =Monaco\13
 if has("gui_running")
     "关闭工具栏
     set guioptions-=T
