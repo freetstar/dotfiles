@@ -223,6 +223,9 @@ alias apa="apt-get autoremove"
 alias apu="apt-get update"
 alias apg="apt-get upgrade"
 alias proxy="cd /home/freetstar/Downloads/proxy/goagent/local/;python2 proxy.py"
+alias sudo="nocorrect sudo"
+alias gvim="gvim 1>/dev/null 2>&1"
+alias g++opencv="g++ `pkg-config --cflags --libs opencv`"
 #全局alias
 alias -g ...="../.."
 alias -g ....="../../.."
@@ -364,5 +367,7 @@ compdef _python smart_python
 alias ogv2flv='mencoder -of lavf -oac mp3lame -lameopts abr:br=56 -srate 22050 -ovc lavc -lavcopts vcodec=flv:vbitrate=250:mbd=2:mv0:trell:v4mv:cbp:last_pred=3 -vf scale=640:480'
 #
 # Customize to your needs...
-PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
-export PKG_CONFIG_PATH
+
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH

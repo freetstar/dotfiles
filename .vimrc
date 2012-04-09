@@ -55,6 +55,9 @@ set tw=500
 set modeline
 "设置paste，从剪贴板年铁代码，保持代码原有的风格
 "set paste   //目前于sniptext有冲突
+"将系统用ctag生成的systags包括
+set tags+=~/.vim/systags
+
 """""""""""""""""""""'"tab设置"""""""""""""""""""""""""'
 "在插入tab时，插入的不是tab字符，而是相等数量的space字符
 set expandtab
@@ -67,6 +70,10 @@ set smarttab
 "让vim在删除tab时，将多个space识别为一个tab进行操作,免除敲4个backspace
 set softtabstop=4
 
+" 用来打开list功能，显示不可见字符
+nmap <leader>l :set list!<CR>
+" 设置为>-格式
+set listchars=tab:>-,eol:$
 
 "1}}}
 

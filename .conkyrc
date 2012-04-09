@@ -42,7 +42,8 @@ default_bar_size 60 8
 #########################
 draw_shades no
 
-default_color D6D6D6
+default_color black
+#default_color D6D6D6
 
 color0 F2F2F2
 color1 7296BB

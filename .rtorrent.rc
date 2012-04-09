@@ -50,7 +50,7 @@ port_range = 6890-6999
 
 # Check hash for finished torrents. Might be usefull until the bug is
 # fixed that causes lack of diskspace not to be properly reported.
-#check_hash = no
+check_hash = no
 
 # Set whetever the client should try to connect to UDP trackers.
 #use_udp_trackers = yes
@@ -73,15 +73,15 @@ port_range = 6890-6999
 # "auto" (start and stop DHT as needed), or "on" (start DHT immediately).
 # The default is "off". For DHT to work, a session directory must be defined.
 # 
-# dht = auto
+ dht = auto
 
 # UDP port to use for DHT. 
 # 
-# dht_port = 6881
+ dht_port = 6881
 
 # Enable peer exchange (for torrents not marked private)
 #
-# peer_exchange = yes
+ peer_exchange = yes
 
 #
 # Do not modify the following parameters unless you know what you're doing.

@@ -1,5 +1,45 @@
-set passkeys+='mail\.google\.com':c/jkhnpouelxsfra#`[]z?\*nrtgidIU+-=<Tab><Return> 
-set passkeys+='\.google\.com/reader/view':c/jkhnpouelxsfra#`[]z?\*nrtgidIU+-=<Tab><Return>  
-autocmd LocationChange (www|mail)\.google\.com/(reader|mail) -js modes.set(modes.PASS_THROUGH)
-autocmd LocationChange \.twitter\.com -js modes.set(modes.PASS_THROUGH)
-set go+=T
+"1.0rc1
+
+loadplugins '\.(js|penta)$'
+group user
+set passkeys='mail\.google\.com':c/jkhnpouelxsfra#`[]z?\*nrtgidIU+-=<Tab><Return>,'\.google\.com/reader/view':c/jkhnpouelxsfra#`[]z?\*nrtgidIU+-=<Tab><Return>
+set autocomplete=
+command! google -nargs=* tabopen g map s :google map S :exe ":google "+content.getSelection() 
+
+set mapleader=','
+
+noremap <leader>tm :tabopen mail.google.com<CR>
+noremap <leader>tr :tabopen https://www.google.com/reader<CR>
+noremap <leader>t+ :tabopen plus.google.com<CR>
+noremap y Y
+noremap Y y
+
+"
+noremap <C-c> <C-v><C-c>
+inoremap <C-c> <C-v><C-c>
+cnoremap <C-c> <C-v><C-c>
+"these 3 lines above euqals to this line
+map -modes=n,v,i,c <C-c> -builtin <C-v><C-c>
+
+"used only in insert and command line mode
+inoremap <C-v> <C-v><C-v>
+cnoremap <C-v> <C-v><C-v>
+
+inoremap <C-x> <C-v><C-x>
+cnoremap <C-x> <C-v><C-x>
+
+inoremap <C-z> <C-v><C-z>
+cnoremap <C-z> <C-v><C-z>
+
+
+noremap <C-a> <C-v><C-a>
+inoremap <C-a> <C-v><C-a>
+cnoremap <C-a> <C-v><C-a>
+
+"move more
+noremap j 5j
+noremap k 5k
+
+set defsearch=google
+
+" vim: set ft=pentadactyl:
