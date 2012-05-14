@@ -47,6 +47,8 @@ setopt bang_hist
 setopt AUTO_PUSHD
 #相同的历史路径只保留一个
 setopt PUSHD_IGNORE_DUPS
+#
+setopt pushd_silent
 
 #在命令前添加空格,不将此命令添加到记录文件中
 setopt HIST_IGNORE_SPACE
@@ -190,13 +192,11 @@ bindkey "\e\e" sudo-command-line
 ###################associate the file with applications#######
 autoload -U zsh-mime-setup
 zsh-mime-setup
-alias -s png=eog
 alias -s c=vim
 alias -s cpp=vim
-alias -s png=eog
 alias -s html=$BROWSER
-alias -s jpg=eog
-alias -s gif=eog
+for i in jpg png ;alias -s $i=eog
+for i in avi rmvb wmv rm mkv;alias -s $i=gnome-mplayer
 alias -s doc=libreoffice
 alias -s gz=tar -xzvf 
 alias -s bz2=tar -xjvf
@@ -217,6 +217,7 @@ alias top10='print -l $((o)history%% *)|uniq -c|sort -nr|head -n 10'
 alias killzom='ps -ef | grep defunct | grep -v grep | awk '{print "kill -9" $2,$3}''
 alias killssh="kill $(ps aux|grep "ssh -q"|awk -F" " '{print $2}')"
 alias p='pacman'
+alias df='df -Th'
 alias y='yaourt'
 alias agi="apt-get install"
 alias apa="apt-get autoremove"
@@ -232,6 +233,7 @@ alias -g ....="../../.."
 alias -g .....="../../../.."
 alias -g L="|less"
 alias -g C="|wc -l"
+alias -g N="> /dev/null"
 
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; } 
 
@@ -368,6 +370,16 @@ alias ogv2flv='mencoder -of lavf -oac mp3lame -lameopts abr:br=56 -srate 22050 -
 #
 # Customize to your needs...
 
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
-
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+dumb-cd(){
+    if [[ -n $BUFFER ]] ; then
+        zle expand-or-complete
+    else
+        BUFFER="cd "
+        zle end-of-line
+        zle expand-or-complete
+    fi
+}
+zle -N dumb-cd
+bindkey "\t" dumb-cd

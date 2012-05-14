@@ -17,7 +17,7 @@
 #xfce-mcs-manager 
 
 #set the wallpaper
-hsetroot -full /home/freetstar/Downloads/hotot_tan___ovilia___wallpaper_by_5h3ll3x-d4ks6nq.png &
+hsetroot -full /home/freetstar/Downloads/hotot.png
 
 # launch unicode-rxvt daemon 
 #urxvtd -q -f -o                                   

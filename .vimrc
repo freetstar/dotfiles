@@ -56,7 +56,7 @@ set modeline
 "设置paste，从剪贴板年铁代码，保持代码原有的风格
 "set paste   //目前于sniptext有冲突
 "将系统用ctag生成的systags包括
-set tags+=~/.vim/systags
+"set tags+=~/.vim/systags
 
 """""""""""""""""""""'"tab设置"""""""""""""""""""""""""'
 "在插入tab时，插入的不是tab字符，而是相等数量的space字符
@@ -79,9 +79,6 @@ set listchars=tab:>-,eol:$
 
 "设置折叠{{{2
 "set foldcolumn=4
-"python专用
-set foldmethod=syntax
-"
 "2}}}
 
 "配置vim字体和颜{{{3
@@ -231,7 +228,7 @@ let g:pydoc_cmd="/usr/bin/pydoc"
 "let g:pydoc_highlight=0 //是否要取消高亮
 
 "pylint.vim
-autocmd FileType python compiler pylint
+"autocmd FileType python compiler pylint
 
 "不要在每次buffer保存时调用Pylint
 let g:pylint_onwrite = 0
